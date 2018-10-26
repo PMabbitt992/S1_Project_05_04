@@ -25,41 +25,118 @@ body {
     min-width: 500px;
     margin: auto;
     background-color: rgb(231, 223, 207);
+    color: rgb(45, 68, 52);
 }
 
 article {
-    width: 880px;
-    margin: auto;
+    float: right;
+    color: white;
+    width: 75%;
+    margin-right: 100px;
+    display: none;
+    background-color: rgb(45, 68, 52);
+    font-size: 20px;
+}
+
+
+h1 {
+    float: right;
+    display: block;
+    background-color: rgb(45, 68, 52);
+    color: white;
+    width: 75%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-right: 100px;
+    height: 8.5em;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+
 }
 
 ul {
-    float: left;
     list-style: none;
     margin: 0px;
     padding: 0px;
 }
 
+p {
+    padding: 10px;
+}
+
 /* Links */
 a {
     text-decoration: none;
-    color: rgb(205, 190, 123);
+    color: rgb(45, 68, 52);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul#stories li a:hover {
+    background-color: rgb(50, 63, 53);
+    color: rgb(209, 209, 209);
 }
 
 /* Stories Nav */
-ul.stories {
+
+
+ul#stories li a {
+    color: white;
     display: block;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-right: 10px;
+    border: 3px solid black;
+    width: 10%;
+    background-color: rgb(45, 68, 52);
 }
 
+/* Marathon */
+h1.marathon {
+    background-image: url('https://images.unsplash.com/photo-1502904550040-7534597429ae?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5d9575e86751b65d41da8dfe6f09e23a&auto=format&fit=crop&w=2749&q=80');
+}
+
+article.marathon p {
+    height: 250px;
+}
+
+/* Highway 7  */
+
+h1.highway7 {
+    background-image: url('https://cdn.pixabay.com/photo/2015/07/30/16/34/road-867991_1280.jpg');
+}
+
+article.highway7 p {
+    height: 100px;
+}
+
+/* Cougars */
+h1.cougars {
+    background-image: url('fur.jpg')
+}
+
+article.cougars p {
+    height: 170px;
+}
 
 /* Images */
 
 img#logo {
     display: block;
-    padding-left: 10%;
+    width: 70%;
+    margin: auto;
 }
 
 img#blake {
     float: right;
+    width: 12%;
 }
 
 
@@ -68,7 +145,7 @@ img#blake {
 ul[id^=col] {
     width: 20%;
     margin: auto;
-
+    float: left;
 }
 
 ul[id^=col]:first-of-type {
@@ -77,6 +154,7 @@ ul[id^=col]:first-of-type {
 
 ul[id^=col] li:first-of-type {
     font-weight: 900;
+    text-decoration: underline;
 }
 
 
@@ -93,4 +171,24 @@ footer {
     width: 100%;
     padding: 10px;
     margin: 10px;
+}
+
+/* Story Apperance */
+h1.marathon:hover+article.marathon {
+    display: block;
+    border-top: 3px solid white;
+}
+
+h1.highway7:hover+article.highway7 {
+    display: block;
+    border-top: 3px solid white;
+}
+
+h1.cougars:hover+article.cougars {
+    display: block;
+    border-top: 3px solid white;
+}
+
+h1:hover {
+    height: 50px;
 }
